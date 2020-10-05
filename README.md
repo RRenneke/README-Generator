@@ -41,13 +41,15 @@ Acceptance Criteria:
 * [Usage](Usage)
 * [License](License)
 * [Badges](Badges)
-* [Contributing](Contributing)
+* [Credits](Credits)
 * [tests](tests)
 * [Questions](Questions)
     
 ## Installation
 ---
-To install this project, first clone the repostiroy. Then, on the command line, enter npm install or npm i. Next enter node index.js. Several questions about the content will be displayed. Answer them with as much detail as possible. 
+To install this project, first clone the repostiroy. Then, on the command line, enter npm install or npm i. Next enter node index.js. Several questions about the content will be displayed. Answer them with as much detail as possible.
+
+<img src="commandLine.png" alt="commandLineQuestions Screenshot">
 
 ## Usage
 ---
@@ -55,11 +57,32 @@ Use the resource when you have a new project.
 
 ## License
 ---
-None at this time. 
+MIT License
+
+Copyright (c) [year] [fullname]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE. 
 
 ## Contributing 
 ---
-None at this time
+Site used for licence verbagige: https://choosealicense.com/licenses/mit/
+General layout: https://smu.bootcampcontent.com/SMU-Coding-Bootcamp/smu-dal-fsf-pt-06-2020-u-c/blob/master/01-HTML-Git-CSS/04-Supplemental/Good-README-Guide/README.md
 
 ## Test
 ---
