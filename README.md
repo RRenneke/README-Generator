@@ -37,15 +37,13 @@ Acceptance Criteria:
 
 ##Table Of Contents 
 ---
-* [Installation](Installation)
-* [Usage](Usage)
-* [License](License)
-* [Badges](Badges)
-* [Credits](Credits)
-* [tests](tests)
-* [Questions](Questions)
-* [Links](Links)
-* [Badge](Badge)
+* [Installation](#Installation)
+* [Usage](#Usage)
+* [License](#License)
+* [Credits](#Credits)
+* [Tests](#Tests)
+* [Links](#Links)
+* [Badges](#Badges)
     
 ## Installation
 ---
@@ -81,13 +79,13 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE. 
 
-## Contributing 
+## Credits
 ---
 Site used for licence verbagige: https://choosealicense.com/licenses/mit/
 
 General layout: https://smu.bootcampcontent.com/SMU-Coding-Bootcamp/smu-dal-fsf-pt-06-2020-u-c/blob/master/01-HTML-Git-CSS/04-Supplemental/Good-README-Guide/README.md
 
-Badeges: https://shields.io/category/other
+Site used to create and obtain badges: https://shields.io/category/other
 
 ## Test
 ---
@@ -100,4 +98,5 @@ https://rrenneke.github.io/README-Generator/
 
 https://github.com/RRenneke/README-Generator
 
+## Badges
 ![AUR last modified](https://img.shields.io/aur/last-modified/unsure)
