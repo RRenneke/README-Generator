@@ -52,15 +52,15 @@ const questions = [
 inquirer.prompt(questions)
         .then(answers => {
 //the name of the file will be what the user proces as title. It will be a markdown file.
-            let fileName = `${answers.Title}.md`;
+            let fileTitle = `${answers.Title}.md`;
             console.log(answers)
-            console.log(fileName)
+            console.log(fileTitle)
             //require the markdown js file
-            const generateMarkdown = require('./utils/markdown.js');
+            const generateFile = require('./utils/markdown.js');
             //use the users answers to generate the file
-            const markdown = generateMarkdown(answers);
+            const markdown = generateFile(answers);
             //write the file
-            writeToFile(fileName, markdown);
+            writeToFile(fileTitle, markdown);
         })
         //fucntion to catch if there is an error
         .catch(error => {
@@ -71,10 +71,10 @@ inquirer.prompt(questions)
 }
 
 //function to write the file
-function writeToFile(fileName, data) {
+function writeToFile(fileTitle, answers) {
     //require file system
     const fs = require('fs');
-    fs.writeFile(fileName, data, (err) => {
+    fs.writeFile(fileTitle, answers, (err) => {
         // Return the error if there is one
         if (err) {
             console.error(err)

@@ -1,5 +1,5 @@
 // function to generate markdown for README
-function generateMarkdown(answers) {
+function generateFile(answers) {
 
 //List for the tables of contents
   let tableOfContents = "";
@@ -47,4 +47,4 @@ function generateMarkdown(answers) {
     ${answers.Testing}`;
 }
 //export the responses
-module.exports = generateMarkdown;
+module.exports = generateFile
