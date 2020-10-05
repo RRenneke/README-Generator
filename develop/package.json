@@ -1,18 +1,23 @@
 {
-  "name": "readme_generator",
+  "name": "goodreadme",
   "version": "1.0.0",
-  "description": "Application will help you create a README",
+  "description": "application that allows you to create a good readme document",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Robin Renneke",
-  "license": "ISC",
-  "dependencies": {
-    "inquirer": "^6.3.1"
-  },
   "repository": {
     "type": "git",
-    "url": "README Generator"
+    "url": "git+https://github.com/RRenneke/README-Generator.git"
+  },
+  "author": "Robin Renneke",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RRenneke/README-Generator/issues"
+  },
+  "homepage": "https://github.com/RRenneke/README-Generator#readme",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "inquirer": "^7.3.3"
   }
 }

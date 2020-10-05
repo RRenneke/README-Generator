@@ -1,68 +1,96 @@
-const fs = require("fs");
-const inquirer = require("inquirer");
+function init() {
 
+    // Initializes the inquirer
+    const inquirer = require('inquirer');
 
-
-// Questions for users
+// array of questions for user
 const questions = [
-        {
-            type: "input",
-            message: "What is the title of your project?",
-            name: "title",
-        },
-        {
-            type: "input",
-            message: "What is your Github user name?",
-            name: "github_username",
-        },
-        {
-            type: "input",
-            message: "Describe your project.",
-            name: "description",
-        },
-        {
-            type: "input",
-            message: "What steps are required to install your project?",
-            name: "install_steps",
-        },
-        {
-            type: "input",
-            message: "Provide instructions and examples for use.",
-            name: "usage",
-        },
-        {
-            type: "input",
-            message: "List your collaborators, third-party assets, and any tutorials used.",
-            name: "collaborators",
-        },
-        {
-            type: "list",
-            message: "Choose your license.",
-            name: "licenses",
-            choices:['MIT', 'GPL v3', 'AGPL', 'None']
-        },
+    {
+        type: "input",
+        name: "Title",
+        message: "What is the title of your project?"
+    },
+    {
+        type: "input",
+        name: "Description",
+        message: "Describe the purpose of your project."
+    },
+    {
+        type: "input",
+        name: "tableOfContents",
+        message: "What should be included in the Table of Contents?"
+    },
+    {
+        type: "input",
+        name: "Installation",
+        message: "What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running."
+    },
+    {
+        type: "input",
+        name: "Usage",
+        message: "Provide instructions and examples for use."
+    },
+    {
+        type: "input",
+        name: "Credits",
+        message: "List your collaborators, any third parts assests, or any tutorials used to create the project."
+    },
+    {
+        type: "list",
+        name: "license",
+        message: "Does the application have or require a license?",
+        choices: ["MIT", "Apache 2.0", "GPL v3", "None"]
+    },
+    {
+        type: "input",
+        name: "Contributing",
+        message: "If you created an application or package and would like other developers to contribute it, you will want to add guidelines here."
+    },
+    {
+        type: "input",
+        name: "Testing",
+        message: "What type of testing did you do?"
+    },
+];
 
-    ];
- 
-    // Function to write file
-    function writeToFile(fileName, data) {
-        fs.writeFile(fileName, data, (err) => {
-            if(err) {
-                throw err;
-            }
-            console.log('success')
-        });
-    }
 
-    // Function to initialize program
-    function init() {
-        inquirer.prompt(questions).then((answers) => {
 
-            const response = markdown(answers);
-            console.log(answers);
+inquirer.prompt(questions)
+        .then(answers => {
 
-            writeToFile('README.md', response);
+            let fileName = `${answers.Title}.md`;
+            console.log(answers)
+            console.log(fileName)
+            const generateMarkdown = require('./utils/generateMarkdown.js');
+
+            // Generate markdown from the users answers
+            const markdown = generateMarkdown(answers);
+
+            writeToFile(fileName, markdown);
         })
-    }
+        .catch(error => {
+            if (error.isTtyError) {
 
-    init();
+            } else {
+    
+            }
+        });
+
+}
+
+function writeToFile(fileName, data) {
+    const fs = require('fs');
+
+    fs.writeFile(fileName, data, (err) => {
+        // If there is error writing to the file, return
+        if (err) {
+            console.error(err)
+            return
+        }
+
+        console.log('Wrote README file successfully')
+    })
+
+}
+
+init();
