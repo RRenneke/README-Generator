@@ -96,4 +96,4 @@ https://rrenneke.github.io/README-Generator/
 
 https://github.com/RRenneke/README-Generator
 
-https://img.shields.io/static/v1?label=<Badge>&message=<MESSAGE>&color=<RED>
+![AUR last modified](https://img.shields.io/aur/last-modified/unsure)
