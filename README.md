@@ -44,6 +44,7 @@ Acceptance Criteria:
 * [Credits](Credits)
 * [tests](tests)
 * [Questions](Questions)
+* [Project Links](Project Links)
     
 ## Installation
 ---
@@ -89,7 +90,8 @@ General layout: https://smu.bootcampcontent.com/SMU-Coding-Bootcamp/smu-dal-fsf-
 N/A
 
 
-Links: 
+## Project Links
+
 https://rrenneke.github.io/README-Generator/
 
 https://github.com/RRenneke/README-Generator
