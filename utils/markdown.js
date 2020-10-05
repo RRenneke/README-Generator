@@ -1,53 +1,50 @@
 // function to generate markdown for README
-function generateMarkdown(data) {
+function generateMarkdown(answers) {
 
 //List for the tables of contents
   let tableOfContents = "";
-  if (data.tableOfContents) {
+  if (answers.tableOfContents) {
     tableOfContents =
       `## Table of Contents
-    
-    * [Title](#Title)
-    * [Description](#Description)
-    * [Installation](#Installation)
-    * [Usage](#Usage)
-    * [Credits](#Credits)
-    * [License](#License)
-    * [Contributing](#Contributing) 
-    * [Testing](#Testing)`
+    - [Title](#Title)
+    - [Description](#Description)
+    - [Installation](#Installation)
+    - [Usage](#Usage)
+    - [Credits](#Credits)
+    - [License](#License)
+    - [Contributors](#Contributors) 
+    - [Testing](#Testing)`
   }
 
 //img for the license
-  if (data.license === 'MIT') {
+  if (answers.license === 'MIT') {
     licenseBadge = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
   
-  } else if (data.license === 'Apache 2.0') {
+  } else if (answers.license === 'Apache 2.0') {
     licenseBadge = "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
   
-  } else if (data.license === 'GPL v3') {
+  } else if (answers.license === 'GPL v3') {
     licenseBadge = "[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)"
   
-  } else if (data.license === 'None') {
+  } else if (answers.license === 'None') {
     licenseBadge = "[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)"
   }
 //grab the user response
   return `
-  # ${data.Title}
-  ## Description
-  ${data.Description}
-  ${tableOfContents}
+  ## Description:
+    ${answers.Description}
   ## Installation
-  ${data.Installation}
+    ${answers.Installation}
   ## Usage
-  ${data.Usage}
+    ${answers.Usage}
+  ## Credits
+    ${answers.Credits}
   ## License
-  ${licenseBadge}
+    ${licenseBadge}
   ## Contributors
-  ${data.Contributors}
+    ${answers.Contributors}
   ## Testing
-  ${data.Testing}
-  ## Questions
-  ${data.Questions}`;
+    ${answers.Testing}`;
 }
 //export the responses
 module.exports = generateMarkdown;

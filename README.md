@@ -1,12 +1,17 @@
-# README-Generator
+In week 9 Class homework, we were asked to write a command-line application that dynamically generates a professional README.md from a user's input using the Inquirer package. 
 
-Good README Generator
-I create a command-line application that dynamically generates a professional README.md from a user's input using the Inquirer package. Because this is a command-line application that is not be deployed, a link to a walkthrough video that demonstrates the functionality of the application is provided. 
+# Title
+---
+ README GENERATOR 
 
-User Story
+## Description
+---
+
+User Story: 
+
 AS A developer, I WANT a README generator, SO THAT can quickly create a professional README for a new project
 
-Acceptance Criteria
+Acceptance Criteria:
 
     GIVEN a command-line application that accepts user input
     WHEN I am prompted for information about my application repository
@@ -30,14 +35,32 @@ Acceptance Criteria
     WHEN I click on the links in the Table of Contents
     THEN I am taken to the corresponding section of the README
 
-Table of Contents
+##Table Of Contents 
+---
+* [Installation](Installation)
+* [Usage](Usage)
+* [License](License)
+* [Badges](Badges)
+* [Contributing](Contributing)
+* [tests](tests)
+* [Questions](Questions)
+    
+## Installation
+---
+To install this project, first clone the repostiroy. Then, on the command line, enter npm install or npm i. Next enter node index.js. Several questions about the content will be displayed. Answer them with as much detail as possible. 
 
-        Title
-        Description
-        Table of Contents
-        Installation
-        Usage
-        License
-        Contributing
-        Tests
-        Questions
+## Usage
+---
+Use the resource when you have a new project. 
+
+## License
+---
+None at this time. 
+
+## Contributing 
+---
+None at this time
+
+## Test
+---
+N/A

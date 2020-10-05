@@ -38,7 +38,7 @@ const questions = [
     },
     {
         type: "input",
-        name: "Contributing",
+        name: "Contributors",
         message: "If you created an application or package and would like other developers to contribute it, you will want to add guidelines here."
     },
     {
@@ -57,7 +57,7 @@ inquirer.prompt(questions)
             console.log(fileName)
             //require the markdown js file
             const generateMarkdown = require('./utils/markdown.js');
-            // Generate markdown from the users answers
+            //use the users answers to generate the file
             const markdown = generateMarkdown(answers);
             //write the file
             writeToFile(fileName, markdown);
