@@ -45,6 +45,7 @@ Acceptance Criteria:
 * [tests](tests)
 * [Questions](Questions)
 * [Links](Links)
+* [Badge](Badge)
     
 ## Installation
 ---
@@ -83,7 +84,10 @@ SOFTWARE.
 ## Contributing 
 ---
 Site used for licence verbagige: https://choosealicense.com/licenses/mit/
+
 General layout: https://smu.bootcampcontent.com/SMU-Coding-Bootcamp/smu-dal-fsf-pt-06-2020-u-c/blob/master/01-HTML-Git-CSS/04-Supplemental/Good-README-Guide/README.md
+
+Badeges: https://shields.io/category/other
 
 ## Test
 ---
