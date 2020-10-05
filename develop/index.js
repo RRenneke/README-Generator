@@ -1,9 +1,9 @@
 function init() {
 
-    // Initializes the inquirer
-    const inquirer = require('inquirer');
+// Initializes the inquirer
+const inquirer = require('inquirer');
 
-// array of questions for user
+//Array of qeustions the user has to answer to populate the readme
 const questions = [
     {
         type: "input",
@@ -14,11 +14,6 @@ const questions = [
         type: "input",
         name: "Description",
         message: "Describe the purpose of your project."
-    },
-    {
-        type: "input",
-        name: "tableOfContents",
-        message: "What should be included in the Table of Contents?"
     },
     {
         type: "input",
@@ -53,44 +48,42 @@ const questions = [
     },
 ];
 
-
-
+//init function will start the process
 inquirer.prompt(questions)
         .then(answers => {
-
+//the name of the file will be what the user proces as title. It will be a markdown file.
             let fileName = `${answers.Title}.md`;
             console.log(answers)
             console.log(fileName)
-            const generateMarkdown = require('./utils/generateMarkdown.js');
-
+            //require the markdown js file
+            const generateMarkdown = require('./utils/markdown.js');
             // Generate markdown from the users answers
             const markdown = generateMarkdown(answers);
-
+            //write the file
             writeToFile(fileName, markdown);
         })
+        //fucntion to catch if there is an error
         .catch(error => {
             if (error.isTtyError) {
-
             } else {
-    
             }
         });
-
 }
 
+//function to write the file
 function writeToFile(fileName, data) {
+    //require file system
     const fs = require('fs');
-
     fs.writeFile(fileName, data, (err) => {
-        // If there is error writing to the file, return
+        // Return the error if there is one
         if (err) {
             console.error(err)
             return
         }
-
-        console.log('Wrote README file successfully')
+        console.log('succes')
     })
 
 }
 
+//call the function
 init();

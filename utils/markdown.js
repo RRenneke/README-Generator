@@ -1,7 +1,7 @@
 // function to generate markdown for README
 function generateMarkdown(data) {
 
-
+//List for the tables of contents
   let tableOfContents = "";
   if (data.tableOfContents) {
     tableOfContents =
@@ -17,12 +17,7 @@ function generateMarkdown(data) {
     * [Testing](#Testing)`
   }
 
-  const issuesBadge = `[![GitHub issues](https://img.shields.io/github/issues/${data.userName}/${data.Title})](https://github.com/${data.userName}/${data.title}/issues)`;
-
-
-  let licenseBadge;
-  const profileImage = `![${data.userName}](https://github.com/${data.userName}.png?size=200)`;
-
+//img for the license
   if (data.license === 'MIT') {
     licenseBadge = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
   
@@ -35,9 +30,8 @@ function generateMarkdown(data) {
   } else if (data.license === 'None') {
     licenseBadge = "[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)"
   }
-
+//grab the user response
   return `
-  
   # ${data.Title}
   ## Description
   ${data.Description}
@@ -53,9 +47,7 @@ function generateMarkdown(data) {
   ## Testing
   ${data.Testing}
   ## Questions
-  ${data.Questions}
-  
-`;
+  ${data.Questions}`;
 }
-
+//export the responses
 module.exports = generateMarkdown;
